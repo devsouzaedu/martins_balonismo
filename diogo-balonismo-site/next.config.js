@@ -2,16 +2,8 @@
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
-  },
-  trailingSlash: false,
-  distDir: 'out',
+    unoptimized: true
+  }
 };
 
 module.exports = nextConfig;
