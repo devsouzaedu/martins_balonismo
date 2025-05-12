@@ -5,15 +5,19 @@ const Hero = () => {
   return (
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Imagem de fundo do balão */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center z-0" 
-        style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('/images/balonismo_voo_turistisco_imagem2.jpeg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-black/50 z-0"></div>
+      <div className="absolute inset-0 z-0">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/images/video_hero.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeos HTML5.
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-black/60 z-0"></div>
+      </div>
       
       <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
         <div className="flex flex-col items-center mb-8">
